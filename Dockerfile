@@ -86,7 +86,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
         ninja-build \
         && rm -rf /var/lib/apt/lists/*
 
-RUN /opt/conda/bin/conda install -c "nvidia/label/cuda-11.8.0"  cuda==11.8 && \
+RUN /opt/conda/bin/conda install -c "nvidia/label/cuda-11.8.0"  cuda-toolkit && \
     /opt/conda/bin/conda clean -ya
 
 # Build Flash Attention CUDA kernels
